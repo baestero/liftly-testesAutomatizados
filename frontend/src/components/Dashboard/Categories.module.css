@@ -1,0 +1,36 @@
+.categoryContainer {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.category {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  background-color: #1d1c1c;
+  border-radius: 15px;
+  height: 160px;
+  width: 160px;
+  border: none;
+  cursor: pointer;
+  transition: 0.1s;
+}
+
+.category:hover,
+.exercise:hover,
+.exerciseHeader img:hover {
+  outline: none;
+  box-shadow: 0 0 0 5px #99f5e0, 0 0 0 4px #06d6a0;
+}
+
+.category img {
+  margin-bottom: 20px;
+  height: 64px;
+  width: 64px;
+}
+
+.category p {
+  color: #fff;
+}

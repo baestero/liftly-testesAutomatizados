@@ -1,0 +1,51 @@
+name: CI - Liftly Testes Automatizados
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+
+jobs:
+  build-and-test:
+    runs-on: ubuntu-latest
+
+    services:
+      mongo:
+        image: mongo
+        ports:
+          - 27017:27017
+        options: >-
+          --health-cmd "mongosh --eval 'db.runCommand({ ping: 1 })'" 
+          --health-interval 10s 
+          --health-timeout 5s 
+          --health-retries 5
+
+    steps:
+      - name: Checkout código
+        uses: actions/checkout@v4
+
+      - name: Instalar Docker Compose
+        run: sudo apt-get update && sudo apt-get install docker-compose -y
+
+      - name: Subir containers
+        run: docker-compose up -d --build
+
+      - name: Aguardar backend subir
+        run: |
+          echo "Esperando backend responder..."
+          for i in {1..30}; do
+            if curl -s http://localhost:3000/health; then
+              echo "Backend está no ar!"
+              break
+            fi
+            echo "Tentativa $i: aguardando..."
+            sleep 5
+          done
+
+      - name: Rodar testes (placeholder)
+        run: echo "Aqui você roda seus testes com npm test ou outro comando"
+
+      - name: Derrubar containers
+        if: always()
+        run: docker-compose down

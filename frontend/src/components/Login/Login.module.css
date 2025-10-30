@@ -1,0 +1,15 @@
+.forms {
+  text-align: center;
+  display: grid;
+  max-width: 40rem;
+  align-content: center;
+  justify-content: center;
+}
+
+@media (max-width: 55rem) {
+  .forms {
+    max-width: 100%;
+    margin: 0 auto;
+    align-content: center;
+  }
+}

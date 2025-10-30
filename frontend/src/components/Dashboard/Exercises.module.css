@@ -1,0 +1,103 @@
+.exerciseContainer {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.exercise {
+  display: flex;
+  padding: 30px;
+  flex-direction: column;
+  background-color: #1d1c1c;
+  border-radius: 15px;
+  border: none;
+  width: 100%;
+  transition: 0.1s;
+}
+
+.exercise p {
+  color: #fff;
+}
+
+.exerciseHeader {
+  display: flex;
+  justify-content: space-between;
+}
+
+.exerciseHeader img {
+  height: 54px;
+  width: 54px;
+  background: #1d1c1c;
+  border-radius: 10px;
+  margin-top: 10px;
+  cursor: pointer;
+  transition: 0.1s;
+}
+.exerciseHeader img:hover {
+  outline: none;
+  box-shadow: 0 0 0 5px #99f5e0, 0 0 0 4px #06d6a0;
+}
+
+.exerciseTitle {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  margin-bottom: 20px;
+  font-weight: bolds;
+}
+
+.exerciseTitle h3 {
+  color: #fff;
+  font-weight: bold;
+  font-size: 1.25rem;
+}
+
+.exerciseTitle h3::first-letter {
+  text-transform: uppercase;
+}
+
+.exerciseStats {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+.exerciseStats span {
+  font-weight: bold;
+  color: #06d6a0;
+}
+
+.crudIcons {
+  display: flex;
+  gap: 15px;
+  justify-content: end;
+  bottom: 20px;
+}
+.crudIcons img {
+  height: 20px;
+  width: 20px;
+  cursor: pointer;
+}
+
+@media (max-width: 55rem) {
+  .exerciseTitle {
+    margin-bottom: 25px;
+  }
+  .exercise {
+    width: 100%;
+    height: 235px;
+  }
+
+  .exerciseHeader {
+    gap: 40px;
+  }
+
+  .exercise p,
+  .exerciseStats span {
+    font-size: 1rem;
+  }
+
+  .exerciseStats {
+    gap: 17px;
+  }
+}

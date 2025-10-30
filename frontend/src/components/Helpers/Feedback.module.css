@@ -1,0 +1,10 @@
+.reps {
+  display: block;
+  background: #000000;
+  padding: 20px;
+  color: rgb(255, 255, 255);
+  font-size: 0.875rem;
+  border-radius: 8px;
+  text-align: start;
+  margin-bottom: 20px;
+}

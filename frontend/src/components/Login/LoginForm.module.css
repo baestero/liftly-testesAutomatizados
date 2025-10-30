@@ -1,0 +1,56 @@
+.perdeu {
+  display: inline-block;
+  color: #666;
+  padding: 0.5rem 0;
+  line-height: 1;
+}
+
+.perdeu::after {
+  content: "";
+  height: 2px;
+  width: 100%;
+  background: currentColor;
+  display: block;
+}
+
+.cadastro {
+  margin-top: 4rem;
+}
+
+.buttonContainer {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  flex-direction: column;
+}
+
+.inputContainer {
+  position: relative;
+}
+.inputContainer input {
+  padding-left: 50px;
+}
+
+.icon,
+.iconSingup {
+  position: absolute;
+  top: 12.5px;
+  right: 300px;
+}
+
+.iconSingup {
+  right: 300px;
+}
+
+.halter {
+  margin-left: 6.75px;
+}
+@media (max-width: 55rem) {
+  .icon {
+    right: 232.5px;
+  }
+
+  .iconSingup {
+    right: 232.5px;
+  }
+}

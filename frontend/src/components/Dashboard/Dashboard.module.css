@@ -1,0 +1,19 @@
+.dashboardContainer {
+  max-width: 40rem;
+  padding: 20px 40px;
+}
+
+.dashboardContainer h1 {
+  margin-bottom: 40px;
+}
+
+@media (max-width: 55rem) {
+  .dashboardContainer {
+    max-width: 40rem;
+    padding: 30px 20px;
+  }
+
+  .dashboardContainer h1 {
+    font-size: 3rem;
+  }
+}
